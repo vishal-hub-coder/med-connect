@@ -13,3 +13,8 @@ export const getProfile = () =>{
 export const updateProfile = (data) =>{
     return API.put("/auth/profile",data);
 }
+
+
+
+
+

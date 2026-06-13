@@ -160,9 +160,14 @@ const Register = () => {
                     onChange={handleChange}
                     className="w-full pl-11 pr-4 py-4 bg-gray-50 border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 rounded-2xl outline-none transition-all appearance-none"
                   >
-                    <option value="doctor">Doctor</option>
-                    <option value="nurse">Nurse</option>
-                    <option value="patient">Patient</option>
+               <option value="user">User</option>
+<option value="doctor">Doctor</option>
+<option value="nurse">Nurse</option>
+<option value="compounder">Compounder</option>
+<option value="caretaker">Caretaker</option>
+<option value="physiotherapist">Physiotherapist</option>
+<option value="labTechnician">Lab Technician</option>
+<option value="admin">Admin</option>
                   </select>
                   <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400">▼</div>
                 </div>

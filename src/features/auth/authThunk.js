@@ -14,6 +14,9 @@ export const loginAction = (formData, navigate) => async (dispatch) => {
     try {
         dispatch(loginStart());
 
+
+
+
         const { data } = await loginUser(formData);
 
         dispatch(
@@ -25,7 +28,19 @@ export const loginAction = (formData, navigate) => async (dispatch) => {
 
         localStorage.setItem("token", data.token);
 
-        navigate("/");
+
+        switch (data.user.role){
+            case "doctor" : navigate("/doctor/dashboard");
+            break;
+            case "nurse" : navigate("/nurse/dashboard");
+            break;
+            case "patient" : navigate("/patient/dashboard");
+            break;
+            case "admin" : navigate("/admin/dashboard");
+            break;
+            default : navigate("/")
+        }
+
     } catch (error) {
         dispatch(
             loginFail(
@@ -51,7 +66,17 @@ export const registerAction = (formData, navigate) => async (dispatch) => {
 
         localStorage.setItem("token", data.token);
 
-        navigate("/");
+  switch (data.user.role){
+            case "doctor" : navigate("/doctor/dashboard");
+            break;
+            case "nurse" : navigate("/nurse/dashboard");
+            break;
+            case "patient" : navigate("/patient/dashboard");
+            break;
+            case "admin" : navigate("/admin/dashboard");
+            break;
+            default : navigate("/")
+        }
     } catch (error) {
         dispatch(
             registerFail(

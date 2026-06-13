@@ -31,14 +31,14 @@ const Login = () => {
       {/* Left Side - Image & Branding */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/30 z-10" />
-        
+
         {/* Background Image */}
-        <img 
-          src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070" 
-          alt="Login Background" 
+        <img
+          src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2070"
+          alt="Login Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        
+
         {/* Content Overlay */}
         <div className="relative z-20 flex flex-col justify-center items-center h-full text-white px-12 text-center">
           <div className="mb-8">
@@ -46,7 +46,7 @@ const Login = () => {
               <span className="text-3xl">🔐</span>
             </div>
           </div>
-          
+
           <h1 className="text-5xl font-bold mb-4 tracking-tight">Welcome Back</h1>
           <p className="text-xl text-blue-100 max-w-md">
             Sign in to continue to your dashboard and manage your projects effortlessly.
@@ -160,19 +160,19 @@ const Login = () => {
                 )}
               </button> */}
               <button
-  type="submit"
-  disabled={loading}
-  className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-semibold py-4 rounded-2xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30"
->
-  {loading ? (
-    <>
-      <Loader />
-      <span>Signing In...</span>
-    </>
-  ) : (
-    "Sign In"
-  )}
-</button>
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-semibold py-4 rounded-2xl transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/30"
+              >
+                {loading ? (
+                  <>
+                    <Loader />
+                    <span>Signing In...</span>
+                  </>
+                ) : (
+                  "Sign In"
+                )}
+              </button>
             </form>
 
             {/* Divider */}
